@@ -1,6 +1,6 @@
 <script>
     import { Input, Label, Button, Select, Spinner } from "flowbite-svelte";
-    let state = "default";
+    let state = Number.parseInt(localStorage.getItem("submitted")) > Date.now() ? "already" : "default";
     let grade;
     let id;
     let items = ["9", "10", "11", "12"].map((e) => {
@@ -14,11 +14,14 @@
         state = "submitting";
         await fetch(`/submit?grade=${grade}&id=${id}`);
         state = "submitted";
+        localStorage.setItem("submitted", Date.now() + 7 * 24 * 60 * 60 * 1000);
     }
 </script>
 
 {#if state == "submitted"}
     Successfully Submitted
+{:else if state == "already"}
+    Already Submitted
 {:else}
     <form on:submit={submit}>
         <div class="mb-6">
