@@ -29,6 +29,7 @@
   "dependencies": {
     "@fontsource/inter": "^5.0.8",
     "flowbite": "^1.8.1",
-    "flowbite-svelte": "^0.44.4"
+    "flowbite-svelte": "^0.44.4",
+    "qrcode": "^1.5.3"
   }
 }

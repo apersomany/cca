@@ -1,4 +1,4 @@
-const BASE = "https://script.google.com/macros/s/AKfycbwGIDN-dQ9Pb1bPRlSRRMkHM03p73zGCHqCMSITHjy_SwRUEpEHkV2aQAmGvSkKqc3nrw/exec";
+const BASE = "https://script.google.com/macros/s/AKfycbxfLPy3odruLz47mjopCxIpvHo5XAoMXMZDufpySR6KFx-IsQgknDLg4Rm_K3ZgzxHbYQ/exec";
 
 export async function GET({ url }) {
     const response = await fetch(BASE + url.search);
