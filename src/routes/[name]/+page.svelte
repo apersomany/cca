@@ -38,6 +38,7 @@
                     "Please connect to the school wifi and try again.",
                 ].join("\n")
             );
+            state = "default";
         }
     }
 </script>
