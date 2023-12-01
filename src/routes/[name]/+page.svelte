@@ -24,7 +24,7 @@
         state = "submitting";
         const resp = await fetch("https://ipinfo.io/ip");
         const text = await resp.text();
-        if (text == "202.77.101.52") {
+        if (text == "202.77.101.52" || text == "103.105.66.130") {
             await fetch(`/submit?name=${data.name}&grade=${grade}&id=${id}`);
             state = "submitted";
             localStorage.setItem(
